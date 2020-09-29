@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="TensorFlow.NET" Version="0.20.0" />
+		<PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="saved_model.pb">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>

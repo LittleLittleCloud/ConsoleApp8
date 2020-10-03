@@ -9,7 +9,7 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            // tf.compat.v1.disable_eager_execution();
+            tf.compat.v1.disable_eager_execution();
             var session = Session.LoadFromSavedModel("./");
 
             foreach(var op in session.graph)

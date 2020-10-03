@@ -20,3 +20,10 @@ steps:
     command: 'run'
     projects: 'ConsoleApp8/ConsoleApp8.csproj'
   displayName: 'run'
+  continueOnError: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'ConsoleApp8/bin/'
+    ArtifactName: 'bin'
+    publishLocation: 'Container'
+  displayName: 'publish building artifacts'
